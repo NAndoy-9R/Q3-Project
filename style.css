@@ -1,1 +1,56 @@
+.nav-logo{
+	width:50px;
+}
 
+.about-logo{
+	width: 200px;
+}
+
+
+.about-header{
+	color:white;
+}
+
+.about-text{
+	color:white;
+}
+
+.btn-align{
+	width:125px;
+	font-family:heiti sc;
+}
+
+a {
+font-family: "Pixelify Sans", serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+
+
+.search-bar{
+	font-family: "Pixelify Sans", serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+  color: #F72C5B;
+}
+
+nav {
+	color: #F72C5B;
+}
+
+body {
+  background-color: #A1E3F9;
+  font-family: "Pixelify Sans", serif;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  text-align: center;
+  color: #3674B5;
+  font-size: 7.5rem;
+  padding: 20px;
+  letter-spacing: 4px;
+}
