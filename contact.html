@@ -1,66 +1,146 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-	<link rel="icon" type="image/png" href="train-ticket.png">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>PROJ: IDK</title>
+    <title>PROJ: TRAIN FARE GUIDE</title>
+
+    <!-- WEBSITE ICON-->
+    <link rel="icon" href="train-ticket.png" type="image/png">
 
     <!-- SETUP BOOTSTRAP -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
     <!-- STYLE/CSS -->
     <link rel="stylesheet" type="text/css" href="style.css">
 
-    <!--FONT 1-->
+    <!-- FONT 1 -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap"
+        rel="stylesheet">
 
-	<!--FONT 2-->
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Jersey+15&display=swap" rel="stylesheet">
+    <!-- FONT 2 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jersey+15&display=swap" rel="stylesheet">
 </head>
 
 <body>
-	<!--NAVBAR-->
-	<nav class="navbar navbar-expand-sm" style="background-color:#C599B6;">
-  	<div class="container-fluid">
 
-  	<!-- LOGO -->
-  			<a class="navbar-brand" href="about us.html">
-      	<img src="train.png" alt="Logo" class="nav-logo">
-    	</a>
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-sm" style="background-color:#C599B6;">
+        <div class="container-fluid">
+            <!-- LOGO -->
+            <a class="navbar-brand" href="about-us.html">
+                <img src="train.png" alt="Train Logo" class="nav-logo" style="width: 40px; height: 40px;">
+            </a>
 
-    <!-- LINKING -->
-    	<ul class="nav-pills nav">
-      	<li class="nav-item">
-       	 <a class="nav-link text-white" href="index.html">Home</a>
-     	 </li>
-     	 <li class="nav-item">
-       	 <a class="nav-link text-white" href="schedule.html">Train Schedule</a>
-     	 </li>
-      	<li class="nav-item">
-        	<a class="nav-link text-white" href="contact.html">Help</a>
-      	</li>
-    	</ul>
+            <!-- LINKING -->
+            <ul class="nav-pills nav">
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="schedule.html">Train Schedule</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="contact.html">Help</a>
+                </li>
+            </ul>
 
-	<!-- SEARCHBAR -->
-    	 <form class="d-flex">
-        <input class="form-control me-2 search-bar" type="text" placeholder="...">
-        <button class="btn search-bar" style="background-color: white;" type="button">search</button>
-      </form>
+            <!-- SEARCHBAR -->
+            <div class="d-flex search-container">
+                <input type="text" id="search" class="search-input form-control" placeholder="Enter here..." />
+                <button class="search-button ms-2" onclick="searchFunction()">Search</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HEADER FOR HELP -->
+    <header class="text-center mt-5">
+        <h1>☆ HELP & ASSISTANCE ☆</h1>
+        <hr>
+
+    <!-- FEEDBACK FORM -->
+    <div class="feedback-form container mt-5">
+        <h2>FEEDBACK FORM</h2>
+        <form id="feedback-form">
+            <!-- NAME -->
+            <div class="mb-3">
+                <label for="name" class="form-label">Full Name</label>
+                <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
+            </div>
+
+            <!-- EMAIL -->
+            <div class="mb-3">
+                <label for="email" class="form-label">Email address</label>
+                <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+            </div>
+
+            <!-- FEEDBACK -->
+            <div class="mb-3">
+                <label for="feedback" class="form-label">Your Feedback</label>
+                <textarea class="form-control" id="feedback" rows="4" placeholder="Write your feedback here" required></textarea>
+            </div>
+
+            <!-- SUBMIT -->
+            <center><button type="submit" class="third-btn" style="">Submit Feedback</button></center>
+        </form>
     </div>
-	</nav>
 
-	<!--HEADER-->
-	<h1>☆ TICKET BOOTH! ☆</h1>
+    <!-- SUCCESS MESSAGE -->
+    <div class="alert alert-success mt-4" id="success-message" style="display: none;">
+        Thank you for your feedback! We appreciate your input.
+    </div>
 
-	<!-- FOOTER -->
-    <hr>
-    <div class="footer"></div>
-    <center><p>&#169; AY 2025 | ICT 9-R | FINAL PROJECT | Rebadulla, Andoy</p></center>
+    <!--HELP-->
+    <br>
+    <p id="assist">For any assistance, feel free to contact us through our social media platforms:</p>
+      
+        <!-- Social Media Links -->
+        <div class="social-media-links">
+            <a href="https://www.facebook.com/YourPage" target="_blank">
+                <img src="facebook-icon.png" alt="Facebook" style="width: 40px; height: 40px; margin-right: 10px;">
+            </a>
+            <a href="https://www.instagram.com/YourProfile" target="_blank">
+                <img src="instagram-icon.png" alt="Instagram" style="width: 40px; height: 40px;">
+            </a>
+        </div>
+    </header>
+
+    <script>
+        document.getElementById("feedback-form").addEventListener("submit", function (event) {
+            event.preventDefault(); // Prevent page reload
+
+            // Get form data
+            const name = document.getElementById("name").value;
+            const email = document.getElementById("email").value;
+            const feedback = document.getElementById("feedback").value;
+
+            // Show success message
+            document.getElementById("success-message").style.display = "block";
+
+            // Clear form fields
+            document.getElementById("name").value = "";
+            document.getElementById("email").value = "";
+            document.getElementById("feedback").value = "";
+        });
+
+        function searchFunction() {
+            alert("Search a valid item!");
+        }
+    </script>
+
+    <!-- FOOTER -->
+    <footer class="text-center mt-5">
+        <p>&#169; AY 2025 | ICT 9-R | FINAL PROJECT | Rebadulla, Andoy</p>
+    </footer>
+
 </body>
 </html>
+
