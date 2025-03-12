@@ -36,7 +36,7 @@
     <nav class="navbar navbar-expand-sm" style="background-color:#C599B6;">
         <div class="container-fluid">
             <!-- LOGO -->
-            <a class="navbar-brand" href="about-us.html">
+            <a class="navbar-brand" href="about-us.html" aria-label="Go to About Us">
                 <img src="train.png" alt="Train Logo" class="nav-logo" style="width: 40px; height: 40px;">
             </a>
 
@@ -55,8 +55,8 @@
 
             <!-- SEARCHBAR -->
             <div class="d-flex search-container">
-                <input type="text" id="search" class="search-input" placeholder="Enter here..." />
-                <button class="search-button" onclick="searchFunction()">Search</button>
+                <input type="text" id="search" class="search-input" placeholder="Search..." aria-label="Search for stations or schedules">
+                <button class="search-button" onclick="searchFunction()" aria-label="Search Button">Search</button>
             </div>
         </div>
     </nav>
@@ -70,8 +70,33 @@
     <!-- TRAIN SCHEDULE DESCRIPTION -->
     <div class="container">
         <p class="lead">
-            The MRT train schedule remains fairly consistent, except when there are technical issues or unexpected delays. Please be patient and stay informed through official announcements.
+            The LRT Line 2 train schedule remains fairly consistent, except when there are technical issues or unexpected delays. Please be patient and stay informed through official announcements.
         </p>
+
+        <!-- TRAIN SCHEDULE -->
+        <div class="train-schedule">
+            <h2 class="text-center">Train Schedule</h2>
+            <table class="table table-striped text-center">
+                <thead>
+                    <tr>
+                        <th>Route</th>
+                        <th>Departure Time</th>
+                        <th>Arrival Time</th>
+                        <th>Duration</th>
+                        <th>Fare (PHP)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>Recto → Legarda</td><td>06:00 AM</td><td>06:10 AM</td><td>10 mins</td><td>18 PHP</td></tr>
+                    <tr><td>Recto → Pureza</td><td>06:15 AM</td><td>06:30 AM</td><td>15 mins</td><td>20 PHP</td></tr>
+                    <tr><td>Recto → V. Mapa</td><td>06:45 AM</td><td>06:55 AM</td><td>10 mins</td><td>18 PHP</td></tr>
+                    <tr><td>Recto → J. Ruiz</td><td>07:00 AM</td><td>07:15 AM</td><td>15 mins</td><td>22 PHP</td></tr>
+                    <tr><td>Recto → Cubao</td><td>07:30 AM</td><td>07:50 AM</td><td>20 mins</td><td>25 PHP</td></tr>
+                    <tr><td>Recto → Anonas</td><td>08:00 AM</td><td>08:20 AM</td><td>20 mins</td><td>28 PHP</td></tr>
+                    <tr><td>Recto → Katipunan</td><td>08:30 AM</td><td>08:50 AM</td><td>20 mins</td><td>28 PHP</td></tr>
+                </tbody>
+            </table>
+        </div>
 
         <!-- PASSENGER REMINDERS -->
         <br>
@@ -89,9 +114,22 @@
     </div>
 
     <!-- FOOTER -->
-    <br>
-    <footer class="text-center">
+    <footer class="text-center mt-4">
         <p>&#169; AY 2025 | ICT 9-R | FINAL PROJECT | Rebadulla, Andoy</p>
     </footer>
+
+    <!-- SEARCH FUNCTION -->
+    <script>
+        function searchFunction() {
+            const query = document.getElementById('search').value;
+            if (query) {
+                alert('Searching for: ' + query);
+            } else {
+                alert('Please enter a search term!');
+            }
+        }
+    </script>
 </body>
+
 </html>
+
