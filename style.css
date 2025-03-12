@@ -1,4 +1,4 @@
-/* ============ FONT STYLES ============ */
+/* Font Styles */
 .jersey-15-regular {
   font-family: "Jersey 15", sans-serif;
   font-weight: 400;
@@ -41,7 +41,7 @@
   font-style: italic;
 }
 
-/* ============ IMAGE STYLING ============ */
+/* Image styling */
 .nav-logo {
   width: 50px;
 }
@@ -50,7 +50,7 @@
   width: 200px;
 }
 
-/* ============ TEXT STYLING ============ */
+/* Text Styling */
 a, p {
   font-family: "Comic Neue", cursive;
   font-weight: 700;
@@ -84,7 +84,7 @@ summary:hover {
   background-color: #A77A98;
 }
 
-/* ============ FORM STYLING ============ */
+/* Form Styling */
 label {
   font-family: "Comic Neue", cursive;
   font-weight: 700;
@@ -123,7 +123,7 @@ option {
   text-align: left;
 }
 
-/* ============ LAYOUT STYLING ============ */
+/* Layout Styling */
 hr {
   border-width: 5px;
   border-style: solid;
@@ -132,7 +132,7 @@ hr {
   margin: 20px 0;
 }
 
-/* ============ FOOTER STYLING ============ */
+/* Footer Styling */
 footer {
   text-align: center;
   font-size: 0.9rem;
@@ -141,31 +141,31 @@ footer {
   color: white;
 }
 
-/* ============ SEARCH BAR STYLING ============ */
+/* Search Bar Styling */
 .search-container {
-  display: flex;
-  align-items: center;
-  justify-content: center; /* Center horizontally */
-  gap: 10px; /* Spacing between input and button */
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center horizontally */
+    gap: 10px; /* Spacing between input and button */
 }
 
 .search-input {
-  font-family: "Comic Neue", cursive;
-  font-weight: 700;
-  font-style: italic;
-  color: #C599B6;
-  padding: 10px;
-  border: 2px solid #C599B6;
-  border-radius: 5px;
-  width: 200px; /* Adjust width of the input */
+    font-family: "Comic Neue", cursive;
+    font-weight: 700;
+    font-style: italic;
+    color: #C599B6;
+    padding: 10px;
+    border: 2px solid #C599B6;
+    border-radius: 5px;
+    width: 200px; /* Adjust width of the input */
 }
 
 .search-input:focus {
-  outline: none;
-  border-color: #3674B5;
+    outline: none;
+    border-color: #3674B5;
 }
 
-/* ============ BUTTON STYLING ============ */
+/* Buttons Styling */
 button {
   padding: 10px;
   background-color: #C599B6;
@@ -197,13 +197,13 @@ button:active {
   font-family: "Comic Neue", cursive;
   font-weight: 700;
   font-style: normal;
-  cursor: pointer;
+  cursor: pointer;          
 }
 
 .btn-custom:hover {
-  background-color: #A77A98;
-  color: white;
-}
+    background-color: #A77A98; 
+    color: white;          
+	}
 
 .btn-secondary-custom {
   padding: 10px;
@@ -222,14 +222,26 @@ button:active {
   color: white;
 }
 
-/* ============ LAYOUT AND BODY STYLING ============ */
+
+/* Layout and Body Styling */
 body {
   background-color: white;
   margin: 0;
   padding: 0;
 }
 
-h1, h2, h3, h4 {
+h1 {
+  font-family: "Jersey 15", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  text-align: center;
+  color: #C599B6;
+  font-size: 4.5rem; /* Adjusted size for readability */
+  padding: 20px;
+  letter-spacing: 4px;
+}
+
+h2 {
   font-family: "Jersey 15", sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -239,62 +251,67 @@ h1, h2, h3, h4 {
   letter-spacing: 4px;
 }
 
-h1 {
-  font-size: 4.5rem; /* Adjusted size for readability */
-}
-
-h2 {
-  font-size: 3rem;
+h4 {
+  font-family: "Jersey 15", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  text-align: center;
+  color: #C599B6;
+  padding: 20px;
+  letter-spacing: 4px;
 }
 
 h3 {
-  font-size: 2.5rem;
-}
-
-h4 {
-  font-size: 2rem;
-}
-
-/* ============ TICKET PRICE BOX STYLING ============ */
-.ticket-price-box {
-  background-color: white;
-  border: 5px solid #C599B6; /* Light border */
+  font-family: "Jersey 15", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  text-align: center;
+  color: #C599B6;
   padding: 20px;
-  font-family: "Comic Neue", cursive;
-  color: #C599B6;
-  border-radius: 10px;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  letter-spacing: 4px;
 }
 
-.ticket-price-box strong {
-  font-weight: 700;
-}
 
-#ticket-generator {
-  padding: 10px;
-  background-color: #C599B6;
-  border-radius: 8px;
-  margin-top: 20px;
-  font-size: 1rem;
-  color: #C599B6;
-}
+  /* Ticket Price Box Styling */
+    .ticket-price-box {
+        background-color: white;
+        border: 5px solid #C599B6; /* Light border */
+        padding: 20px;
+        font-family: "Comic Neue", cursive;
+        color: #C599B6;
+        border-radius: 10px;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    }
 
-#generated-ticket {
-  border: 5px solid #C599B6;
-  padding: 15px;
-  background-color: white;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    .ticket-price-box strong {
+        font-weight: 700;
+    }
+
+    #ticket-generator {
+        padding: 10px;
+        background-color: #C599B6;
+        border-radius: 8px;
+        margin-top: 20px;
+        font-size: 1rem;
+        color: #C599B6;
+    }
+
+    #generated-ticket {
+    border: 5px solid #C599B6;
+    padding: 15px;
+    background-color: white;
+    border-radius: 8px ;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .ticket-details p {
-  font-size: 16px;
-  margin-bottom: 10px;
-  color: #C599B6;
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #C599B6;
 }
 
 .ticket-details strong {
-  font-weight: bold;
+    font-weight: bold;
 }
 
 li {
@@ -303,7 +320,6 @@ li {
   font-style: normal;
 }
 
-/* ============ FEEDBACK FORM STYLING ============ */
 .feedback-form {
   background-color: #fff;
   padding: 20px;
@@ -311,24 +327,49 @@ li {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   max-width: 600px;
   margin: 0 auto;
-}
+ }
 
-.third-btn {
-  font-family: "Comic Neue", cursive;
+ .third-btn {
+ 	 font-family: "Comic Neue", cursive;
   font-weight: 700;
   font-style: normal;
-  background-color: #C599B6;
-  color: white;
-  border-radius: 10px;
-  text-align: center;
-  align-items: center;
-}
+ 	background-color: #C599B6; 
+ 	color: white; 
+ 	border-radius: 10px;
+ 	text-align: center;
+ 	align-items: center;
+ }
 
-#add {
-  color: #C599B6;
-}
+ #add {
+ 	color: #C599B6;
+ }
 
-#assist {
-  color: #C599B6;
-}
+ #assist {
+ 	color: #C599B6;
+ }
+   
+/* TRAIN SCHED */
+ .train-schedule {
+  margin: 50px auto;
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+  }
+        
+ .table {
+  margin-top: 20px;
+   font-family: "Comic Neue", cursive;
+  font-weight: 700;
+  font-style: normal;
+  }
+
+  th {
+   font-family: "Comic Neue", cursive;
+  font-weight: 700;
+  font-style: normal;
+ 	color: #C599B6; 
+ 	text-align: center;
+ 	align-items: center;
+  }
 
